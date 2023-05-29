@@ -17,7 +17,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         fm = supportFragmentManager
-        loadFrag(HomeFragment(), true)
+        loadFrag(ChartFragment(), true)
+        binding.bnView.selectedItemId = R.id.bn_menu_chart // for default icon sync with fragment-
 
         binding.bnView.setOnItemSelectedListener { item ->
             when (item.itemId) {
